@@ -1,6 +1,7 @@
 # Spring-boot-demo Template
 
 we will use it as a spring-boot template repository.
+this is just for secondary development.
 
 ### What can we do!
 
@@ -53,8 +54,8 @@ visit: http://127.0.0.1:8080. then you can find index page.
 
 ### How to use
 
-if you want to use the original spring-boot-demo, then check out the tag: [v0.1](https://github.com/DemonZSD/spring_boot_demo_docker/tree/v0.1),
-the details is desribed in [Futures](#Futures)
+if you want to use the tiny spring-boot-demo, then check out the tag: [v0.1](https://github.com/DemonZSD/spring_boot_demo_docker/tree/v0.1),
+the details is described in [Futures](#Futures)
 
 
 
