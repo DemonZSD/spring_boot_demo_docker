@@ -1,26 +1,49 @@
-first:
+# Spring-boot-demo Template
+
+we will use it as a spring-boot template repository.
+
+### What can we do!
+
+- use maven package this
+- docker build an image
+
+##### First:
 
 use mvn to build the src
 
-`cd spring_boot_demo_docker`
-
-`mvn package`
+```
+$cd spring_boot_demo_docker
+$mvn clean package
+```
 
 then there is target package , in it ,you will find 'log_app-1.0-SNAPSHOT.jar'
 file.
 
-then, go into the target package, and use the command to build an image:
+##### Then
+go into the target package, and use the command to build an image:
 
 ```
 docker build -t <image_name>:<tag> .
 ```
 
-last, use command 
+##### Last 
+
+run this web-server
+ 
 ```
 docker run -it -d -p 8080:8080 <container_name> <image_name>:<tag>
 ```
 
-and visit: http://127.0.0.1:8080. then you can find index page.
+##### check
+ 
+visit: http://127.0.0.1:8080. then you can find index page.
 
+
+
+### Futures
+
+- maven 
+- Spring Boot with Docker
+- use logback configuration
 
 
