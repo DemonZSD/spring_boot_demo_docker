@@ -9,10 +9,10 @@
         <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>log_app</groupId>
-    <artifactId>log_app</artifactId>
+    <groupId>spring-boot-demo</groupId>
+    <artifactId>spring-boot-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>log_app</name>
+    <name>spring-boot-demo</name>
 
     <properties>
         <java.version>1.8</java.version>
