@@ -2,6 +2,7 @@ package org.demonzsd.springbootdemo.controller;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.demonzsd.common.api.response.SingletonResp;
 import org.demonzsd.springbootdemo.service.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +30,7 @@ public class IndexController {
          * }
          *
          */
-        return gson.toJson(resp);
+        return gson.toJson(SingletonResp.builder().success("ok", resp));
     }
 
 }
