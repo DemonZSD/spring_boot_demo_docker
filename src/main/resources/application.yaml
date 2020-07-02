@@ -2,5 +2,12 @@ port:
   8080
 debug:
   false
-
-
+# middle config
+middle:
+  server: aaa
+  # redis
+  etcd:
+    host: 127.0.0.1
+    port: 2379
+    password: 123456
+    timeout: 1000
