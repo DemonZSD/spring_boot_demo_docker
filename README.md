@@ -16,7 +16,7 @@ $cd spring_boot_demo_docker
 $mvn clean package
 ```
 
-then there is target package , in it ,you will find 'log_app-1.0-SNAPSHOT.jar'
+then there is target package , in it ,you will find 'spring-boot-demo-1.0-SNAPSHOT.jar'
 file.
 
 ##### Then
