@@ -42,8 +42,21 @@ visit: http://127.0.0.1:8080. then you can find index page.
 
 ### Futures
 
+#### tag [v0.1]
 - maven 
 - Spring Boot with Docker
 - use logback configuration
+
+
+
+
+
+
+
+### Use
+
+if you want to use the original spring-boot-demo, then check out the tag: [v0.1](https://github.com/DemonZSD/spring_boot_demo_docker/tree/v0.1),
+the details is desribed in .[Futures](#Futures)
+
 
 
