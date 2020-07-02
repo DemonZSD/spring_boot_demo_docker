@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 public class IndexServiceImpl extends BaseServiceImpl implements IndexService {
     @Autowired
     private MiddleProperties middleProperties;
-
     @Override
     public void show() {
 
