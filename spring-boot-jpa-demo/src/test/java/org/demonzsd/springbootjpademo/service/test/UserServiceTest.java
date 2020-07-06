@@ -1,6 +1,7 @@
 package org.demonzsd.springbootjpademo.service.test;
 
 import org.demonzsd.springbootjpademo.entity.pojo.User;
+import org.demonzsd.springbootjpademo.exceptions.ServiceException;
 import org.demonzsd.springbootjpademo.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,6 +44,10 @@ public class UserServiceTest {
         users.add(user);
         users.add(user2);
         users.add(user3);
-        userService.addUsers(users);
+        try {
+            userService.addUsers(users);
+        } catch (ServiceException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.demonzsd.springbootjpademo.entity.pojo.User;
+import org.demonzsd.springbootjpademo.exceptions.ServiceException;
 
 import java.io.Serializable;
 
@@ -16,7 +17,7 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
-@ToString
+@ToString(exclude = "password")
 public class UserResp implements Serializable{
 
     private long id;
@@ -25,12 +26,19 @@ public class UserResp implements Serializable{
     private String password;
     private int age;
 
-    public UserResp copyOfUser(User user){
-        this.id = user.getId();
-        this.age = user.getAge();
-        this.password = user.getPassword();
-        this.uname = user.getUname();
-        return this;
+    /**
+     * copyOfUser copy User instance to UserResp.
+     * @author DemonZSD
+     * @param user pojo instance of table `t_user`
+     * @return {@code org.demonzsd.springbootjpademo.entity.responses.UserResp}
+     */
+    public static UserResp copyOfUser(User user){
+        UserResp userResp = new UserResp();
+        userResp.setId(user.getId());
+        userResp.setAge(user.getAge());
+        userResp.setPassword(user.getPassword());
+        userResp.setUname(user.getUname());
+        return userResp;
     }
 
 }

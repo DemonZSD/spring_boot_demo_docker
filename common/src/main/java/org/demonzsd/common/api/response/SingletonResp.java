@@ -1,7 +1,7 @@
 package org.demonzsd.common.api.response;
 
 import lombok.Getter;
-import lombok.Setter;
+import org.apache.commons.lang3.StringUtils;
 import org.demonzsd.common.api.RespCode;
 import org.demonzsd.common.api.RespMsg;
 
@@ -12,7 +12,7 @@ import org.demonzsd.common.api.RespMsg;
  */
 @Getter
 public class SingletonResp<T> extends BaseResp{
-    private @Setter T data;
+    private T data;
 
     public static SingletonResp builder(){
         return new SingletonResp(new BaseResp(RespCode.SUCCESS_CODE, RespMsg.RESP_OK));
@@ -27,7 +27,8 @@ public class SingletonResp<T> extends BaseResp{
     }
 
     public SingletonResp<T> success(String msg, T data){
-        SingletonResp<T> resp = new SingletonResp<>(new BaseResp(RespCode.SUCCESS_CODE, msg));
+        SingletonResp<T> resp = new SingletonResp<>(new BaseResp(RespCode.SUCCESS_CODE,
+                        StringUtils.isNotEmpty(msg)?msg : RespMsg.RESP_OK));
         if(data != null){
             resp.setData(data);
         }
@@ -35,7 +36,12 @@ public class SingletonResp<T> extends BaseResp{
     }
 
     public SingletonResp failed(String code, String msg){
-        return new SingletonResp(code, msg);
+
+        return new SingletonResp(code, StringUtils.isNotEmpty(msg)?msg : RespMsg.RESP_FAILED);
     }
 
+    public SingletonResp setData(T data) {
+        this.data = data;
+        return this;
+    }
 }
