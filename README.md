@@ -5,8 +5,11 @@ this is just for secondary development.
 
 ### What can we do!
 
-- use maven package this
-- docker build an image
+- can create simplest spring-boot project from this template.
+- can create spring-boot-jpa project from this template.
+
+
+### How to run
 
 ##### First:
 
@@ -43,20 +46,25 @@ visit: http://127.0.0.1:8080. then you can find index page.
 
 ### Futures
 
-#### tag [v0.1]
+### spring-boot-tiny-demo
 - maven 
 - Spring Boot with Docker
 - use logback configuration
-
-#### latest
 - bind the application.yaml config to ConfigurationProperties bean.
+
+### spring-boot-jpa-demo
+- includes the above futures
+- Spring Data JPA
+- crud for mysql
+- junit4 Test 
 
 
 ### How to use
 
-if you want to use the tiny spring-boot-demo, then check out the tag: [v0.1](https://github.com/DemonZSD/spring_boot_demo_docker/tree/v0.1),
+if you want to use the tiny spring-boot-demo, then checkout the tag: [v0.1](https://github.com/DemonZSD/spring_boot_demo_docker/tree/v0.1).
+
+if you want to use the jpa futures, then checkout it from the 
+
 the details is described in [Futures](#Futures)
-
-
 
 
