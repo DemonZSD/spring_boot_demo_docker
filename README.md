@@ -62,10 +62,10 @@ visit: http://127.0.0.1:8080. then you can find index page.
 
 ### How to use
 
-if you want to use the tiny spring-boot-demo, then checkout the tag: [v0.1](https://github.com/DemonZSD/spring_boot_demo_docker/tree/v0.1).
+If you want to use the tiny spring-boot-demo, then checkout the tag: [v0.1](https://github.com/DemonZSD/spring_boot_demo_docker/tree/v0.1).
 
-if you want to use the jpa futures, then checkout it from the 
+If you want to use the jpa futures, then checkout it from the  tag: [v0.3](https://github.com/DemonZSD/spring-boot-demo-docker/releases/tag/v0.3)
 
-the details is described in [Futures](#Futures)
+All details is described in [Futures](#Futures)
 
 
