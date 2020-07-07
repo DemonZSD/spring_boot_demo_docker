@@ -14,10 +14,9 @@ import java.io.Serializable;
  *
  * @author by DemonZSD
  */
-//
-//@Setter
-//@Getter
-//@ToString
+@Setter
+@Getter
+@ToString(exclude = "password")
 public class UserRequest implements Serializable{
     private long id;
     @SerializedName("name")
@@ -35,44 +34,4 @@ public class UserRequest implements Serializable{
         return user;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getUname() {
-        return uname;
-    }
-
-    public void setUname(String uname) {
-        this.uname = uname;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "UserRequest{" +
-                "id=" + id +
-                ", uname='" + uname + '\'' +
-                ", age=" + age +
-                '}';
-    }
 }
