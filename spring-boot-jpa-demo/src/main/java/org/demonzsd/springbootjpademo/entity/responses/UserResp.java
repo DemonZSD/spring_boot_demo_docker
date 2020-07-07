@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.demonzsd.springbootjpademo.entity.pojo.User;
-import org.demonzsd.springbootjpademo.exceptions.ServiceException;
 
 import java.io.Serializable;
 
@@ -21,6 +20,7 @@ import java.io.Serializable;
 public class UserResp implements Serializable{
 
     private long id;
+    @SerializedName("name")
     private String uname;
     @SerializedName("passwd")
     private String password;

@@ -26,22 +26,20 @@ public class SingletonResp<T> extends BaseResp{
         super(baseResp);
     }
 
-    public SingletonResp<T> success(String msg, T data){
-        SingletonResp<T> resp = new SingletonResp<>(new BaseResp(RespCode.SUCCESS_CODE,
-                        StringUtils.isNotEmpty(msg)?msg : RespMsg.RESP_OK));
+    public static SingletonResp<Object> success(String msg, Object data){
+        SingletonResp<Object> resp = new SingletonResp<>(RespCode.SUCCESS_CODE,
+                        StringUtils.isNotEmpty(msg)?msg : RespMsg.RESP_OK);
         if(data != null){
             resp.setData(data);
         }
         return resp;
     }
 
-    public SingletonResp failed(String code, String msg){
-
-        return new SingletonResp(code, StringUtils.isNotEmpty(msg)?msg : RespMsg.RESP_FAILED);
+    public static SingletonResp failed(String code, String msg){
+        return new SingletonResp(code, StringUtils.isNotEmpty(msg) ? msg : RespMsg.RESP_FAILED);
     }
 
-    public SingletonResp setData(T data) {
+    public void setData(T data) {
         this.data = data;
-        return this;
     }
 }

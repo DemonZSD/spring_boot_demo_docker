@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * IndexController is a viewer for index page.
+ * @author DemonZSD
+ *
+ */
 @RestController
 public class IndexController {
 
@@ -30,7 +35,7 @@ public class IndexController {
          * }
          *
          */
-        return gson.toJson(SingletonResp.builder().success("ok", resp));
+        return gson.toJson(SingletonResp.success("ok", resp));
     }
 
 }

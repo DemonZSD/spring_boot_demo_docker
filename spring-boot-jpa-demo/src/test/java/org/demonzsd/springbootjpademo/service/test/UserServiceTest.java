@@ -1,7 +1,8 @@
 package org.demonzsd.springbootjpademo.service.test;
 
 import org.demonzsd.springbootjpademo.entity.pojo.User;
-import org.demonzsd.springbootjpademo.exceptions.ServiceException;
+import org.demonzsd.springbootjpademo.entity.requests.UserRequest;
+import org.demonzsd.springbootjpademo.exceptions.SpringbootJpaDemoException;
 import org.demonzsd.springbootjpademo.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,17 +28,17 @@ public class UserServiceTest {
 
     @Test
     public void insertUsers(){
-        List<User> users = new ArrayList<>();
-        User user = new User();
+        List<UserRequest> users = new ArrayList<>();
+        UserRequest user = new UserRequest();
         user.setAge(18);
         user.setPassword("123456");
         user.setUname("gougou");
 
-        User user2 = new User();
+        UserRequest user2 = new UserRequest();
         user2.setAge(22);
         user2.setPassword("123456");
         user2.setUname("liuliu");
-        User user3 = new User();
+        UserRequest user3 = new UserRequest();
         user3.setAge(31);
         user3.setPassword("123456");
         user3.setUname("niuniu");
@@ -46,7 +47,7 @@ public class UserServiceTest {
         users.add(user3);
         try {
             userService.addUsers(users);
-        } catch (ServiceException e) {
+        } catch (SpringbootJpaDemoException e) {
             e.printStackTrace();
         }
     }

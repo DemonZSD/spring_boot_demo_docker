@@ -57,6 +57,7 @@ visit: http://127.0.0.1:8080. then you can find index page.
 - Spring Data JPA
 - crud for mysql
 - junit4 Test 
+- Use `Gson` as `GsonHttpMessageConverter`
 
 
 ### How to use

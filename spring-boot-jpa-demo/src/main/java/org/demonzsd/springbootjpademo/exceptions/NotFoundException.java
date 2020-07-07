@@ -1,17 +1,17 @@
 package org.demonzsd.springbootjpademo.exceptions;
 
-import org.aspectj.weaver.ast.Not;
-import org.demonzsd.common.api.RespMsg;
+import org.demonzsd.springbootjpademo.common.CustomConst;
+
 
 /**
  * NotFoundException catch the not found or empty exception
  *
  * @author by DemonZSD
  */
-public class NotFoundException extends ServiceException{
+public class NotFoundException extends SpringbootJpaDemoException {
 
     public NotFoundException(){
-        this(RespMsg.NOT_FOUND);
+        this(CustomConst.CAN_NOT_FOUND_MSG);
     }
 
     public NotFoundException(String msg) {
