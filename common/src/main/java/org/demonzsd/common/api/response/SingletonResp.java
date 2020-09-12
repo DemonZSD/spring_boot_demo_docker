@@ -26,8 +26,8 @@ public class SingletonResp<T> extends BaseResp{
         super(baseResp);
     }
 
-    public static SingletonResp<Object> success(String msg, Object data){
-        SingletonResp<Object> resp = new SingletonResp<>(RespCode.SUCCESS_CODE,
+    public static SingletonResp success(String msg, Object data){
+        SingletonResp resp = new SingletonResp(RespCode.SUCCESS_CODE,
                         StringUtils.isNotEmpty(msg)?msg : RespMsg.RESP_OK);
         if(data != null){
             resp.setData(data);
