@@ -1,16 +1,13 @@
 package org.demonzsd.springbootdemo.service;
 
-/*
- * @description TODO
+/**
+ * IndexService
  * @author DemonZSD
  */
 public interface IndexService  extends BaseService{
 
-    /*
-     * @description TODO
-     * @author DemonZSD
-     * @param 
-     * @return void
+    /**
+     * show something
      */
     void show();
 }
