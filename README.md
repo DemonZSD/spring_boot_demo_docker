@@ -51,6 +51,7 @@ visit: http://127.0.0.1:8080. then you can find index page.
 - Spring Boot with Docker
 - use logback configuration
 - bind the application.yaml config to ConfigurationProperties bean.
+- events design pattern
 
 ### spring-boot-jpa-demo
 - includes the above futures
@@ -58,6 +59,11 @@ visit: http://127.0.0.1:8080. then you can find index page.
 - crud for mysql
 - junit4 Test 
 - Use `Gson` as `GsonHttpMessageConverter`
+
+### spring-boot-swagger-demo 
+
+- use the swagger tools and ui
+- generate the api docs
 
 
 ### How to use
