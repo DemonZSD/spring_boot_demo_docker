@@ -31,7 +31,7 @@ public class IndexServiceImpl extends BaseServiceImpl implements IndexService, A
         logger.debug("this is debug msg");
         logger.info("this is info msg");
         logger.error("this is error msg");
-        EventSource source = new EventSource();
+        EventSource source = new EventSource("1","I'm event source");
         applicationEventPublisher.publishEvent(new IndexControllerEvent(source));
     }
 
