@@ -1,5 +1,7 @@
 package org.weshzhu.concurrent;
 
+import org.demonzsd.common.scheduler.thread.ThreadPoolFactory;
+
 public class ThreadPoolFactoryTest {
 
     public static void main(String[] args) {

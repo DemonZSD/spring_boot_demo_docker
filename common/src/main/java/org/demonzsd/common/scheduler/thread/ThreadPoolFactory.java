@@ -1,14 +1,18 @@
-package org.weshzhu.concurrent;
+package org.demonzsd.common.scheduler.thread;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 
+ *
  * @author weshzhu
  */
 public class ThreadPoolFactory {
-    private final static int MAX_POOL_SIZE = 24;
+    /**
+     * 计算密集型，cpu core 数 + 1
+     * IO密集型，cpu core数 * 2
+     */
+    private final static int MAX_POOL_SIZE = Runtime.getRuntime().availableProcessors() + 1;
     private final static int CORE_POOL_SIZE = 16;
     private final static long KEEP_ALIVE_TIME = 3;
     private static BlockingDeque<Runnable> queue = new LinkedBlockingDeque<>();
